@@ -1,14 +1,13 @@
 import React from 'react';
-
-const Pad = () => {
-  
-}
+import DrumMachine from './components/DrumMachine'
+import './styles.css'
 
 const App = () => {
-
+  
   return (
-    <div>
-      hello world!
+    <div id='container' className='centered'>
+      <h1>It's a drum machine!</h1>
+      <DrumMachine />
     </div>
   );
 }

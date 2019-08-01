@@ -1,0 +1,22 @@
+#drum-machine {
+  display: grid;
+  width: 15em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.drum-pad button {
+  color: #FF851B;
+  border: 3px solid #FF851B;
+  background: none;
+  height: 5em;
+  width: 5em;
+  text-transform: uppercase;
+}
+
+.centered {
+  margin: auto;
+  width: 50%;
+  text-align: center
+}
