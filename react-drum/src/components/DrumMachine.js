@@ -14,13 +14,10 @@ const DrumMachine = () => {
     'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3'
   ]);
 
-  const handleKeyDown = (e) => {
-    console.log(e.key);
-    // NEED to implement logic for playing pads on keyDown
-  }
+  const names = ['q', 'w', 'e', 'a', 's', 'd', 'z', 'x', 'c'];
 
   return (
-    <div tabIndex='0' id='drum-machine' className='centered' onKeyDown={e => handleKeyDown(e)}>
+    <div id='drum-machine' className='centered'>
       <Pad name='q' audioUrl={sounds[0]} />
       <Pad name='w' audioUrl={sounds[1]} />
       <Pad name='e' audioUrl={sounds[2]} />

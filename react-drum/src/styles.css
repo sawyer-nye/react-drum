@@ -1,3 +1,7 @@
+html {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
 #drum-machine {
   display: grid;
   width: 15em;
@@ -13,6 +17,7 @@
   height: 5em;
   width: 5em;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .centered {

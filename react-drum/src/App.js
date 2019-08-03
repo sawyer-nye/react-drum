@@ -6,7 +6,7 @@ const App = () => {
   
   return (
     <div id='container' className='centered'>
-      <h1>It's a drum machine!</h1>
+      <h1>Drum Machine</h1>
       <DrumMachine />
     </div>
   );
