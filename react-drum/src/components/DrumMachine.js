@@ -18,15 +18,15 @@ const DrumMachine = () => {
 
   return (
     <div id='drum-machine' className='centered'>
-      <Pad name='q' audioUrl={sounds[0]} />
-      <Pad name='w' audioUrl={sounds[1]} />
-      <Pad name='e' audioUrl={sounds[2]} />
-      <Pad name='a' audioUrl={sounds[3]} />
-      <Pad name='s' audioUrl={sounds[4]} />
-      <Pad name='d' audioUrl={sounds[5]} />
-      <Pad name='z' audioUrl={sounds[6]} />
-      <Pad name='x' audioUrl={sounds[7]} />
-      <Pad name='c' audioUrl={sounds[8]} />
+      <Pad name='q' audioUrl={sounds[0]} tabIndex={0} />
+      <Pad name='w' audioUrl={sounds[1]} tabIndex={1} />
+      <Pad name='e' audioUrl={sounds[2]} tabIndex={2} />
+      <Pad name='a' audioUrl={sounds[3]} tabIndex={3} />
+      <Pad name='s' audioUrl={sounds[4]} tabIndex={4} />
+      <Pad name='d' audioUrl={sounds[5]} tabIndex={5} />
+      <Pad name='z' audioUrl={sounds[6]} tabIndex={6} />
+      <Pad name='x' audioUrl={sounds[7]} tabIndex={7} />
+      <Pad name='c' audioUrl={sounds[8]} tabIndex={8} />
     </div>
   );
 }

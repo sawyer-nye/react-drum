@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
-const Pad = ({ name, audioUrl }) => {
+const Pad = ({ name, audioUrl, tabIndex }) => {
+  const inputRef = useRef(null);
+
   const playPad = () => {
-    const sound = new Audio(audioUrl);
-
-    sound.play();
-    console.log(`${name} playing`);
-
-    /*
-    setTimeout(() => {
-      console.log('paused');
-      sound.currentTime = 0;
-    }, sound.duration * 100);
-    */
+    inputRef.current.currentTime = 0;
+    inputRef.current.play();  
   }
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    }
+  }, []);
 
   const handleKeyDown = (e) => {
     console.log('pad', e.key, (e.key === name));
@@ -22,8 +23,9 @@ const Pad = ({ name, audioUrl }) => {
   }
 
   return (
-    <div className='drum-pad' id={name} onKeyDown={e => handleKeyDown(e)}>
+    <div className='drum-pad' id={name} tabIndex={tabIndex}>
       <button onClick={playPad}>{name}</button>
+      <audio ref={inputRef} src={audioUrl} id={name} />
     </div>
   );
 }
